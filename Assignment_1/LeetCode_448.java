@@ -12,6 +12,10 @@
 
 
 //code
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 class Solution {
     public List<Integer> findDisappearedNumbers(int[] nums) {
         int n = nums.length;
@@ -36,45 +40,46 @@ class Solution {
 // Space Complexity : O(1)
 // The above code uses a nested loop to check for each number in the range [1, n] if it exists in the array. The time complexity is O(n^2) due to the nested loops, and the space complexity is O(1) as no additional data structures are used.
 
-class Solution {
-    public List<Integer> findDisappearedNumbers(int[] nums) {
-        int n = nums.length;
-        List<Integer> arr = new ArrayList<>();
-        Set<Integer> map = new HashSet<>();
-        for(int i=0;i<n;i++){
-            map.add(nums[i]);
-        }
-        for(int i=1;i<=n;i++){
-            if(!map.contains(i)){
-                arr.add(i);
-            }
-        }
-        return arr;
-    }
-}
+
+// class Solution {
+//     public List<Integer> findDisappearedNumbers(int[] nums) {
+//         int n = nums.length;
+//         List<Integer> arr = new ArrayList<>();
+//         Set<Integer> map = new HashSet<>();
+//         for(int i=0;i<n;i++){
+//             map.add(nums[i]);
+//         }
+//         for(int i=1;i<=n;i++){
+//             if(!map.contains(i)){
+//                 arr.add(i);
+//             }
+//         }
+//         return arr;
+//     }
+// }
 
 // Time Complexity : O(n)
 // Space Complexity : O(n)
 
 
-class Solution {
-    public List<Integer> findDisappearedNumbers(int[] a) {
-        List<Integer> ans = new ArrayList<>();
-        int n = a.length;
-        for(int i=0;i<n;i++){
-            while(a[a[i]-1]!=a[i]){
-                int temp=a[a[i]-1];
-                a[a[i]-1]=a[i];
-                a[i]=temp;
-            }
-        }
-        for(int i=0;i<n;i++){
-            if(a[i]!=i+1){
-                ans.add(i+1);
-            }
-        }
-        return ans;
-    }
-}
+// class Solution {
+//     public List<Integer> findDisappearedNumbers(int[] a) {
+//         List<Integer> ans = new ArrayList<>();
+//         int n = a.length;
+//         for(int i=0;i<n;i++){
+//             while(a[a[i]-1]!=a[i]){
+//                 int temp=a[a[i]-1];
+//                 a[a[i]-1]=a[i];
+//                 a[i]=temp;
+//             }
+//         }
+//         for(int i=0;i<n;i++){
+//             if(a[i]!=i+1){
+//                 ans.add(i+1);
+//             }
+//         }
+//         return ans;
+//     }
+// }
 
 //

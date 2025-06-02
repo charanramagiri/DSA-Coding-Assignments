@@ -15,7 +15,7 @@ Output: [4,9,9,49,121]
 CODE:
 
  */
-
+import java.util.Arrays;
 class Solution {
     public int[] sortedSquares(int[] nums) {
         int n = nums.length;

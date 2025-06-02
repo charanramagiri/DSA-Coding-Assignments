@@ -23,6 +23,7 @@ Constraints:
 
  //Code
 
+ 
  class Solution {
     // Function to count nodes of a linked list.
     public int getCount(Node head) {

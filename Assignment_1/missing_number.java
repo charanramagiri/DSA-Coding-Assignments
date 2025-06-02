@@ -30,6 +30,7 @@ n = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the
 
 //Code :
 
+import java.util.HashSet;
 class Solution {
     public int missingNumber(int[] nums) {
         int n = nums.length;
@@ -52,18 +53,18 @@ class Solution {
 // Space Complexity : O(n)
 // The above code uses a HashSet to store the elements of the array, and then iterates through the range [0, n] to find the missing number. The time complexity is O(n) for both the insertion and search operations in the HashSet, and the space complexity is O(n) for storing the elements in the HashSet.
 
-class Solution {
-    public int missingNumber(int[] nums) {
-        int n = nums.length;
-        int sum = n*(n+1)/2;
-        int s=0;
-        for(int i=0;i<n;i++){
-            s+=nums[i];
-        }
-        int miss = sum-s;
-        return miss;
-    }
-}
+        // class Solution {
+        //     public int missingNumber(int[] nums) {
+        //         int n = nums.length;
+        //         int sum = n*(n+1)/2;
+        //         int s=0;
+        //         for(int i=0;i<n;i++){
+        //             s+=nums[i];
+        //         }
+        //         int miss = sum-s;
+        //         return miss;
+        //     }
+        // }
 
 // Time Complexity : O(n)
 // Space Complexity : O(1)
