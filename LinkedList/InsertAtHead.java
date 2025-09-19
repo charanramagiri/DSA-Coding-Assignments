@@ -35,6 +35,32 @@ class LinkedList{
             temp=temp.next;
         }
         temp.next=newnode;
+    }
+
+    public void insertAtposition(int data, int position){
+        Node newnode = new Node(data);
+
+        if(position==1){
+            newnode.next = Head;
+            Head = newnode;
+            return;
+        }
+
+        Node temp = Head;
+        int cnt = 1;
+
+        while(temp!=null && cnt<position-1){
+            temp=temp.next;
+            cnt++;
+        }
+
+        if(temp==null){
+            System.out.println("Invalid Position");
+            return;
+        }
+
+        newnode.next = temp.next;
+        temp.next = newnode;
 
     }
 
@@ -52,6 +78,7 @@ public class InsertAtHead {
         ll.printallele();
 
         ll.insertTail(40);
+        ll.insertAtposition(55, 03);
 
         ll.printallele();
     }
