@@ -38,6 +38,10 @@ class LinkedList{
     }
 
     public void insertAtposition(int data, int position){
+        if(position<=0){
+            throw new IllegalArgumentException("position must be >=1");
+        }
+
         Node newnode = new Node(data);
 
         if(position==1){
@@ -55,8 +59,7 @@ class LinkedList{
         }
 
         if(temp==null){
-            System.out.println("Invalid Position");
-            return;
+            throw new IllegalArgumentException("position out of bounds");
         }
 
         newnode.next = temp.next;
@@ -78,7 +81,7 @@ public class LinkedListPractice {
         ll.printallele();
 
         ll.insertTail(40);
-        ll.insertAtposition(55, 03);
+        ll.insertAtposition(55, 3);
 
         ll.printallele();
     }
