@@ -67,7 +67,7 @@ class LinkedList{
 
 
 }
-public class InsertAtHead {
+public class LinkedListPractice {
     public static void main(String[] args){
         LinkedList ll = new LinkedList();
 
