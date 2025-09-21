@@ -66,6 +66,28 @@ class LinkedList{
         temp.next = newnode;
 
     }
+    public void deleteathead(){
+        if(Head==null){
+            return;
+        }
+        Head=Head.next;
+    }
+
+    public void deleteattail(){
+        if(Head==null){
+            System.out.println("List is Empty");
+            return;
+        }
+        else if(Head.next==null){
+            Head=null;
+            return;
+        }
+        Node curr = Head;
+        while(curr.next.next!=null){
+            curr=curr.next;
+        }
+        curr.next=null;
+    }
 
 
 
@@ -78,10 +100,12 @@ public class LinkedListPractice {
         ll.insertHead(20);
         ll.insertHead(30);
 
-        ll.printallele();
-
         ll.insertTail(40);
         ll.insertAtposition(55, 3);
+
+        ll.printallele();
+
+        ll.deleteattail();
 
         ll.printallele();
     }
